@@ -21,7 +21,6 @@ jobs:
         with:
           files: |
             **/*.xml
-            **/*.json
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
       
