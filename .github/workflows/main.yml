@@ -16,11 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: |
-            **/twister_report.xml
+        run: junit2html **/twister.xml
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
       
