@@ -1,0 +1,20 @@
+manifest:
+  self:
+    path: nrf/zephyr
+    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+  
+  projects:
+    - name: nrf
+      remote: ncs
+      repo-path: sdk-nrf
+      revision: main
+      import: true
+      
+    - name: devacademy-ncsinter
+      path: nrf/samples/devacademy/ncs-inter
+      revision: sandbox
+      url: git@github.com:LukaszBielakNordicSemi/ncs-inter.git
