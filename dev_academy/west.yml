@@ -17,4 +17,4 @@ manifest:
     - name: devacademy-ncsinter
       path: nrf/samples/devacademy/ncs-inter
       revision: sandbox
-      url: git@github.com:LukaszBielakNordicSemi/ncs-inter.git
+      url: https://github.com/LukaszBielakNordicSemi/ncs-inter.git
