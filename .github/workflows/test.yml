@@ -32,7 +32,7 @@ jobs:
           west update -o=--depth=1 -n
 
       - name: Build firmware
-        working-directory: nrf/samples/devacademy/${{ matrix.course }}/l9
+        working-directory: dev_academy/nrf/samples/devacademy/${{ matrix.course }}/l9
         run: |
           west twister -T . -v --inline-logs --integration
           junit2html twister-out/twister.xml ${{ matrix.course }}_report.html
@@ -43,6 +43,6 @@ jobs:
         with:
           name: test results ${{ matrix.course }}
           path: |
-            nrf/samples/devacademy/${{ matrix.course }}/l9/twister-out/*.xml
-            nrf/samples/devacademy/${{ matrix.course }}/l9/twister-out/*.json
-            nrf/samples/devacademy/${{ matrix.course }}/l9/twister-out/*.log
+            dev_academy/nrf/samples/devacademy/${{ matrix.course }}/l9/twister-out/*.xml
+            dev_academy/nrf/samples/devacademy/${{ matrix.course }}/l9/twister-out/*.json
+            dev_academy/nrf/samples/devacademy/${{ matrix.course }}/l9/twister-out/*.log
